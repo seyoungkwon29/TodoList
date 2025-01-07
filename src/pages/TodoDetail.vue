@@ -1,13 +1,3 @@
-<template>
-  <div>
-    <h2>Todo Detail</h2>
-    <p>ID: {{ todo.id }}</p>
-    <p>Title: {{ todo.title }}</p>
-    <p>Completed: {{ todo.completed ? 'Yes' : 'No' }}</p>
-    <q-btn label="Back to List" @click="goBack" />
-  </div>
-</template>
-
 <script setup>
 import { useTodoStore } from '../stores/todoStore';
 import { useRoute, useRouter } from 'vue-router';
@@ -24,3 +14,14 @@ const goBack = () => {
   router.push('/todos');
 };
 </script>
+
+
+<template>
+  <div>
+    <h2>Todo Detail</h2>
+    <p>ID: {{ todo.id }}</p>
+    <p>Title: {{ todo.title }}</p>
+    <p>Completed: {{ todo.completed ? 'Yes' : 'No' }}</p>
+    <q-btn label="Back to List" @click="goBack" />
+  </div>
+</template>

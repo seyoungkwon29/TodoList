@@ -54,7 +54,8 @@ export default [
     // add your custom rules here
     rules: {
       'prefer-promise-reject-errors': 'off',
-
+      'vue/multi-word-component-names': 'off', // multi-word 규칙 비활성화
+      
       // allow debugger during development only
       'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
     }

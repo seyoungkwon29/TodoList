@@ -1,14 +1,12 @@
-const routes = [
-  {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
-    ]
-  },
+import Home from '../pages/Home.vue';
+import TodoList from '../pages/TodoList.vue';
+import TodoDetail from '../pages/TodoDetail.vue';
 
-  // Always leave this as last one,
-  // but you can also remove it
+const routes = [
+  { path: '/', component: Home },
+  { path: '/todos', component: TodoList },
+  { path: '/todos/:id', component: TodoDetail },
+  
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
